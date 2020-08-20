@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#SBATCH --job-name=cellshear
+#SBATCH --output=cellshear.out
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=12
+#SBATCH --partition=lts
+#SBATCH --time=60
+
+
+mpirun -n 12 ./oneCellShear config.xml
+
+
+
+
+
